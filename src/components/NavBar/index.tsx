@@ -5,6 +5,7 @@ import Link from 'next/link';
 import NavImage from '../../../public/Images/nav/nav-menu.png';
 import OffCnavas from './OffCanvas';
 import { useState } from 'react';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function NavBar() {
   const [offCanvasClicked, setOffCanvasClicked] = useState<boolean>(false);
@@ -32,8 +33,11 @@ export default function NavBar() {
           <li className='mr-4 cursor-pointer'>
             <Link href='/menu2'>Menu2</Link>
           </li>
-          <li className='cursor-pointer'>
+          <li className='mr-4 cursor-pointer'>
             <Link href='/menu3'>Menu3</Link>
+          </li>
+          <li>
+            <ThemeSwitcher />
           </li>
         </ul>
       </div>
